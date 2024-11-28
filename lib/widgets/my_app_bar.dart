@@ -2,7 +2,7 @@ import 'package:ai_chat/providers/active_theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MyAppBar extends ConsumerStatefulWidget {
+class MyAppBar extends ConsumerStatefulWidget implements PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
   const MyAppBar({required this.scaffoldKey, super.key});
