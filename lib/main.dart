@@ -26,7 +26,7 @@ class App extends ConsumerWidget {
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       themeMode: activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-      home: const ChatScreen(),
+      home: ChatScreen(),
     );
   }
 }
