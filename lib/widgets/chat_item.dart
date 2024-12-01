@@ -11,11 +11,11 @@ class ChatItem extends StatefulWidget {
   final Animation<double> typingAnimation;
 
   const ChatItem({
-    Key? key,
+    super.key,
     required this.message,
     required this.isMe,
     required this.typingAnimation,
-  }) : super(key: key);
+  });
 
   @override
   State<ChatItem> createState() => _ChatItemState();
