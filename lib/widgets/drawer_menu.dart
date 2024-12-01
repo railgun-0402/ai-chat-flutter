@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-final Uri policyUrl = Uri.parse('https://celestial-clam-8a3.notion.site/a5c323e0053d4bda88a1584a2f941fce');
-final Uri ruleUrl = Uri.parse('https://celestial-clam-8a3.notion.site/d5d75deaea7d442293b4d3eb75868a02');
+final Uri policyUrl = Uri.parse('https://www.notion.so/14f257a1bbb180aa8d38c47502408f64?pvs=4');
+final Uri ruleUrl = Uri.parse('https://www.notion.so/14f257a1bbb18009a70bd4f1e5ae6234?pvs=4');
 final Uri helpUrl = Uri.parse('https://celestial-clam-8a3.notion.site/AIChats-4294b075a76341d8955ec3374aa5f8db');
 
 
