@@ -40,6 +40,7 @@ dependencies:
   speech_to_text: ^7.0.0
   url_launcher: ^6.3.1
   share_plus: ^10.1.2
+  introduction_screen: ^3.1.14
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +58,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
