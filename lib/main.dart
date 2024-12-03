@@ -1,4 +1,5 @@
 import 'package:ai_chat/screens/chat_screen.dart';
+import 'package:ai_chat/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants/themes.dart';
 import 'providers/active_theme_provider.dart';
@@ -26,7 +27,7 @@ class App extends ConsumerWidget {
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       themeMode: activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-      home: ChatScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
