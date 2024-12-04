@@ -12,22 +12,35 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
+
+    final introMenuStyle = TextStyle(
+      fontSize: 16,
+      color: Theme.of(context).colorScheme.onSurface,
+    );
+
+    final introMenuColor = Theme.of(context).colorScheme.onSurface;
+
     return IntroductionScreen(
       pages: [
         PageViewModel(
-          title: "Welcome",
-          body: "Discover the amazing features of our app.",
-          image: Center(child: Image.asset('assets/tutorial1.png', height: 175)),
+          title: "モバイルチャットへようこそ！",
+          body: "Welcome to mobile chat!",
+          image: Center(child: Image.asset('assets/icon1.png', height: 175)),
         ),
         PageViewModel(
-          title: "Easy Navigation",
-          body: "Navigate the app with ease using intuitive controls.",
-          image: Center(child: Image.asset('assets/tutorial2.png', height: 175)),
+          title: "〜使い方〜",
+          body: "チャットで聞きたいことを入力し、AIに質問してみましょう！",
+          image: Center(child: Image.asset('assets/icon2.png', height: 175)),
         ),
         PageViewModel(
-          title: "Get Started",
-          body: "Start exploring and make the most of your experience.",
-          image: Center(child: Image.asset('assets/tutorial3.png', height: 175)),
+          title: "音声でも対応！",
+          body: "音声ボタンを押下して、話しかけてみましょう！",
+          image: Center(child: Image.asset('assets/icon2.png', height: 175)),
+        ),
+        PageViewModel(
+          title: "さあ、始めよう！",
+          body: "スマホであなたの生活を便利に！",
+          image: Center(child: Image.asset('assets/icon2.png', height: 175)),
         ),
       ],
       onDone: () {
@@ -43,9 +56,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         );
       },
       showSkipButton: true,
-      skip: const Text("Skip"),
-      next: const Icon(Icons.arrow_forward),
-      done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
+      skip: Text(
+          "Skip",
+        style: introMenuStyle,
+      ),
+      next: Icon(Icons.arrow_forward, color: introMenuColor),
+      done: Text("Done", style: introMenuStyle),
     );
   }
 }
