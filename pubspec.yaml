@@ -41,6 +41,7 @@ dependencies:
   url_launcher: ^6.3.1
   share_plus: ^10.1.2
   introduction_screen: ^3.1.14
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
@@ -96,3 +97,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_icons:
+  ios: true
+  image_path: "assets/mainIcon.png"
