@@ -28,9 +28,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           image: Center(child: Image.asset('assets/icon1.png', height: 175)),
         ),
         PageViewModel(
-          title: "〜使い方〜",
-          body: "チャットで聞きたいことを入力し、AIに質問してみましょう！",
-          image: Center(child: Image.asset('assets/icon2.png', height: 175)),
+        title: "〜使い方〜",
+        body: "チャットで聞きたいことを入力し、AIに質問してみましょう！",
+        image: SafeArea(
+        child: Center(child: Image.asset('assets/screen1.png', height: 450, width: MediaQuery.of(context).size.width * 0.8)),
+          ),
         ),
         PageViewModel(
           title: "音声でも対応！",
