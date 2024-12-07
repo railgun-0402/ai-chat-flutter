@@ -4,16 +4,29 @@ import 'package:ai_chat/widgets/drawer_menu.dart';
 import 'package:ai_chat/widgets/my_app_bar.dart';
 import 'package:ai_chat/widgets/text_and_voice_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /*
  * チャット画面を表示するウィジェット
  */
-class ChatScreen extends StatelessWidget {
-  ChatScreen({super.key});
+class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
 
+  @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   final _focusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    FlutterNativeSplash.remove();
+  }
 
   @override
   Widget build(BuildContext context) {

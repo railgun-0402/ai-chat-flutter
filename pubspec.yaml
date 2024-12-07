@@ -42,6 +42,7 @@ dependencies:
   share_plus: ^10.1.2
   introduction_screen: ^3.1.14
   flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.3
 
 dev_dependencies:
   flutter_test:
@@ -101,3 +102,7 @@ flutter:
 flutter_icons:
   ios: true
   image_path: "assets/mainIcon.png"
+
+flutter_native_splash:
+  image: "assets/mainIcon.png"
+  color: "100c08"
