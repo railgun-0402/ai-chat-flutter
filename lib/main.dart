@@ -1,11 +1,13 @@
-import 'package:ai_chat/screens/chat_screen.dart';
 import 'package:ai_chat/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants/themes.dart';
 import 'providers/active_theme_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const ProviderScope(child: App()));
 }
 
@@ -27,7 +29,7 @@ class App extends ConsumerWidget {
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       themeMode: activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-      home: OnboardingScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }
