@@ -2,6 +2,7 @@ import 'package:ai_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -16,6 +17,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void initState() {
     super.initState();
     FlutterNativeSplash.remove();
+  }
+
+  Future<void> _completeOnboarding(BuildContext context) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isFirstLaunch', false);
+
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const ChatScreen()),
+    );
   }
 
   @override
@@ -54,15 +65,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ),
       ],
       onDone: () {
+        _completeOnboarding(context);
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ChatScreen()),
+          MaterialPageRoute(builder: (context) => const ChatScreen()),
         );
       },
       onSkip: () {
+        _completeOnboarding(context);
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => ChatScreen()),
+          MaterialPageRoute(builder: (context) => const ChatScreen()),
         );
       },
       showSkipButton: true,
